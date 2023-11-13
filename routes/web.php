@@ -7,8 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/category',function(){
+    return view('admin.category.index');
+});
 
-Route::post('/category-create',[CategoryController::class,'store']);
-
-Route::get('/category-create',[CategoryController::class,'allData']);
-Route::get('/',[CategoryController::class,'index']);
