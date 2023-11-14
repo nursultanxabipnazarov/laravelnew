@@ -11,3 +11,6 @@ Route::get('/category',function(){
     return view('admin.category.index');
 });
 
+Route::get('/category-create',function(){
+    return view('admin.category.create');
+});
