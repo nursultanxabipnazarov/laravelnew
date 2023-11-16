@@ -23,7 +23,8 @@
           </div>
           <div class="container-fluid">
             <div class="card">
-                <form action="" method="post">
+                <form action="/categories" method="post">
+                  @csrf
                 <div class="card-body">
                   <h5 class="card-title">Category create</h5>
                   <div class="row mb-3 align-items-center">
@@ -33,12 +34,12 @@
                     <div class="col-lg-8 col-md-12">
                       <input
                         type="text"
+                        name="name"
                         data-toggle="tooltip"
                         title="A Tooltip for the input !"
-                        class="form-control"
-                        id="validationDefault05"
+                      
                         placeholder="name"
-                        required
+                        
                       />
                     </div>
                   </div>
@@ -49,12 +50,11 @@
                     <div class="col-lg-8 col-md-12">
                       <input
                         type="text"
-                        class="form-control"
-                        placeholder="description"
-                        required
+                        name="text"
+                        
                       />
                       <button
-                      type="button"
+                      type="submit"
                       class="btn btn-success btn-sm text-white"
                     >
                       ADD

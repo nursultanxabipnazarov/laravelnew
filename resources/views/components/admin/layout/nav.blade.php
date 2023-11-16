@@ -28,7 +28,7 @@
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="/category-create" class="sidebar-link"
+                    <a href="category-add" class="sidebar-link"
                       ><i class="mdi mdi-note-outline"></i
                       ><span class="hide-menu"> Add Category </span></a
                     >

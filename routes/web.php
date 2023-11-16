@@ -9,12 +9,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/category',function(){
-    return view('admin.category.index');
-});
-
-Route::get('/category-create',function(){
+Route::get('category-add',function(){
     return view('admin.category.create');
 });
 
-Route::get('test',[TestController::class,'index']);
+
+Route::resource('categories',CategoryController::class);
