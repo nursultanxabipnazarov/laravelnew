@@ -34,7 +34,7 @@
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="/category" class="sidebar-link"
+                    <a href="categories" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu"> All Category </span></a
                     >

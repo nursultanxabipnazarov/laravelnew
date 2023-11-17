@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Auth\Events\Validated;
+
+
+
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -17,7 +21,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categories = Category::all();
+        return view('admin.category.index', compact('categories'));
     }
 
     /**
@@ -39,15 +44,17 @@ class CategoryController extends Controller
     public function store(Request $request)
     {
       
-       
-      $request->validate([
-        'name' => 'required|string|max:255',
-        'desc' => 'required',
-    ]);
+        $request->validate([
+            'name' => 'required',
+            'desc' => 'required',
+        ]);
+        
 
-      Category::create($request->all());
-      return "asd";
+        Category::create($request->all());
+        return redirect()->route('categories.index')->with('msg', 'Category created successfully');
+     
 
+     
     }
     /**
      * Display the specified resource.
