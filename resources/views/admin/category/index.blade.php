@@ -19,12 +19,7 @@
               <table class="table">
                 <thead class="thead-light">
                   <tr>
-                    <th>
-                      <label class="customcheckbox mb-3">
-                        <input type="checkbox" id="mainCheckbox" />
-                        <span class="checkmark"></span>
-                      </label>
-                    </th>
+                    
                     <th scope="col">Rendering engine</th>
                     <th scope="col">Browser</th>
                     <th scope="col">Platform(s)</th>
@@ -33,18 +28,23 @@
                 </thead>
                 <tbody class="customtable">
                   <tr>
-                    <th>
-                      <label class="customcheckbox">
-                        <input type="checkbox" class="listCheckbox" />
-                        <span class="checkmark"></span>
-                      </label>
-                    </th>
+                    
                     @forelse ($categories as  $category)
 
                     <td>{{$category->name}}</td>
                     <td>{{$category->desc}}</td>
                     <td><a href="{{ route('categories.edit', ['category'=>$category->id]) }}">edit</td>
-                    <td>4</td>
+                      <td>
+                        <a href="">
+                          <form action="{{ route('categories.destroy', ['category'=>$category->id]) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">
+                              DELETE
+                            </button>
+                          </form>
+                        </a>
+                      </td>
                   </tr>
                   @empty
                   <tr>

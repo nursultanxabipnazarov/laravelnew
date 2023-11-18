@@ -102,6 +102,9 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        // Qaytib borish
+        return redirect()->route('categories.index');
     }
 }
