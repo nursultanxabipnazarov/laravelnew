@@ -32,7 +32,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.category.create');
     }
 
     /**
@@ -75,7 +75,8 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+       
+        return view('admin.category.edit', compact('category'));
     }
 
     /**
@@ -87,7 +88,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $data = $request->all();
+        $category->update($data);
+        return redirect()->route('categories.index');
+
     }
 
     /**

@@ -43,7 +43,7 @@
 
                     <td>{{$category->name}}</td>
                     <td>{{$category->desc}}</td>
-                    <td>Win 95+</td>
+                    <td><a href="{{ route('categories.edit', ['category'=>$category->id]) }}">edit</td>
                     <td>4</td>
                   </tr>
                   @empty

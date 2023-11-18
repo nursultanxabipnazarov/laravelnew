@@ -13,11 +13,11 @@
     <meta name="robots" content="noindex,nofollow" />
     <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon.png" />
     <!-- Custom CSS -->
-    <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet" />
+    <link href="/assets/libs/flot/css/float-chart.css" rel="stylesheet" />
     <!-- Custom CSS -->
-    <link href="dist/css/style.min.css" rel="stylesheet" />
+    <link href="/dist/css/style.min.css" rel="stylesheet" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,13 +55,13 @@
                         <b class="logo-icon ps-2">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                             <!-- Dark Logo icon -->
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="light-logo" width="25" />
+                            <img src="/assets/images/logo-icon.png" alt="homepage" class="light-logo" width="25" />
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span class="logo-text ms-2">
                             <!-- dark Logo text -->
-                            <img src="../assets/images/logo-text.png" alt="homepage" class="light-logo" />
+                            <img src="/assets/images/logo-text.png" alt="homepage" class="light-logo" />
                         </span>
                         <!-- Logo icon -->
                         <!-- <b class="logo-icon"> -->
@@ -280,7 +280,7 @@
             </nav>
         </header>
 
-                      {{$slot}}
+        {{$slot}}  
 
         <!-- ============================================================== -->
         <script src="/assets/libs/jquery/dist/jquery.min.js"></script>

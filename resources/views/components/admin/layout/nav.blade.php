@@ -28,13 +28,14 @@
                 >
                 <ul aria-expanded="false" class="collapse first-level">
                   <li class="sidebar-item">
-                    <a href="category-add" class="sidebar-link"
+                    <a href="{{route('categories.create')}}
+                    " class="sidebar-link"
                       ><i class="mdi mdi-note-outline"></i
                       ><span class="hide-menu"> Add Category </span></a
                     >
                   </li>
                   <li class="sidebar-item">
-                    <a href="categories" class="sidebar-link"
+                    <a href="{{route('categories.index')}}" class="sidebar-link"
                       ><i class="mdi mdi-note-plus"></i
                       ><span class="hide-menu"> All Category </span></a
                     >
