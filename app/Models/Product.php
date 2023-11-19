@@ -10,23 +10,25 @@ class Product extends Model
     use HasFactory;
 
     protected $fillable = [
+        'category_id',
+        'user_id', 
         'name',
         'description',
          'price',
-          'user_id', 
-          'category_id'
+          
+          
     ];
 
 
 
 
     public  function user(){
-        $this->belongsTo(User::class);
+        $this->belongsTo(User::class ,'user_id');
     }
 
 
 
     public function category(){
-        $this->belongsTo(Category::class);
+        $this->belongsTo(Category::class,'category_id');
     }
 }
