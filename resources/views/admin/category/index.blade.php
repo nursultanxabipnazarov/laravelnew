@@ -33,13 +33,13 @@
 
                     <td>{{$category->name}}</td>
                     <td>{{$category->desc}}</td>
-                    <td><a href="{{ route('categories.edit', ['category'=>$category->id]) }}">edit</td>
+                    <td ><a class="badge bg-primary" href="{{ route('categories.edit', ['category'=>$category->id]) }}">edit</td>
                       <td>
                         <a href="">
                           <form action="{{ route('categories.destroy', ['category'=>$category->id]) }}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">
+                            <button class="badge bg-danger" type="submit">
                               DELETE
                             </button>
                           </form>

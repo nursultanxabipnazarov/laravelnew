@@ -253,7 +253,11 @@
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated"
                                 aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="javascript:void(0)"><i
-                                        class="mdi mdi-account me-1 ms-1"></i> My Profile</a>
+                                        class="mdi mdi-account me-1 ms-1"></i>
+                                        @auth
+                                        {{Auth::user()->name}}
+                                        @endauth
+                                       
                                 <a class="dropdown-item" href="javascript:void(0)"><i
                                         class="mdi mdi-wallet me-1 ms-1"></i> My Balance</a>
                                 <a class="dropdown-item" href="javascript:void(0)"><i
@@ -264,7 +268,10 @@
                                     Setting</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="javascript:void(0)"><i
-                                        class="fa fa-power-off me-1 ms-1"></i> Logout</a>
+                                        class="fa fa-power-off me-1 ms-1"></i> <form action="{{route('logout')}}" method="post">
+                                            @csrf
+                                            <button type="submit ">Logout</button>
+                                            </form> Logout</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="ps-4 p-10">
                                     <a href="javascript:void(0)"

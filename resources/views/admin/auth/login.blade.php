@@ -150,7 +150,7 @@
             </div>
             <div class="row mt-3">
               <!-- Form -->
-              <form action="{{route('login')}}" method="POST" class="col-12" >
+              <form action="" method="POST" class="col-12" >
                 <!-- email -->
                 @csrf
                 <div class="input-group mb-3">
@@ -175,10 +175,10 @@
                   <div class="col-12">
                     <a
                       class="btn btn-success text-white"
-                      href="#"
+                      href="{{route('registr.create')}}"
                       id="to-login"
                       name="action"
-                      >Back To Login</a
+                      >Sign-up</a
                     >
                     <button
                       class="btn btn-info float-end"

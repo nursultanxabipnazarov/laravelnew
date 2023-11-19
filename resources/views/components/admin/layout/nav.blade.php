@@ -18,6 +18,8 @@
                   ><span class="hide-menu">Dashboard</span></a
                 >
               </li>
+              @auth
+                
               <li class="sidebar-item">
                 <a
                   class="sidebar-link has-arrow waves-effect waves-dark"
@@ -42,6 +44,9 @@
                   </li>
                 </ul>
               </li>
+             
+              @endauth
+
               <li class="sidebar-item">
                 <a
                   class="sidebar-link waves-effect waves-dark sidebar-link"
