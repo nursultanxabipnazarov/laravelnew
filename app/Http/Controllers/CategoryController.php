@@ -107,4 +107,14 @@ class CategoryController extends Controller
         // Qaytib borish
         return redirect()->route('categories.index');
     }
+    
+    public function cros(Category $category)
+    {
+        $category->delete();
+
+        // Qaytib borish
+        return redirect()->route('categories.index');
+    }
+
+
 }
