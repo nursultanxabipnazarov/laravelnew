@@ -13,8 +13,10 @@ class Product extends Model
         'category_id',
         'user_id', 
         'name',
-        'description',
-         'price',
+        'price',
+        'img',
+        'desc',
+
           
           
     ];
@@ -23,12 +25,12 @@ class Product extends Model
 
 
     public  function user(){
-        $this->belongsTo(User::class ,'user_id');
+        $this->belongsTo(User::class );
     }
 
 
 
     public function category(){
-        $this->belongsTo(Category::class,'category_id');
+        $this->belongsTo(Category::class);
     }
 }

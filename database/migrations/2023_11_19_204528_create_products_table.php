@@ -18,8 +18,9 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->string('name');
-            $table->text('description');
             $table->integer('price');
+            $table->string('img');
+            $table->text('desc');
             $table->timestamps();
         });
     }

@@ -12,37 +12,35 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
      $porduct = Product::with('users','categories')->get();
         return view('admin.product.index', compact('products'));
-        
+
     }
 
     /**
-     * Show the form for creating a new resource.
+             * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('admin.product.create',compact('categories'));
+
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a         newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**
