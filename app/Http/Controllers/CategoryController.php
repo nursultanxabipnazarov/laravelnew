@@ -104,7 +104,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        // Qaytib borish
+        
         return redirect()->route('categories.index');
     }
     
@@ -112,7 +112,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        // Qaytib borish
+        
         return redirect()->route('categories.index');
     }
 
