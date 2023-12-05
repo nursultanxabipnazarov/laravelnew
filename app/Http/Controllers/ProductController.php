@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\User;
+use Illuminate\Support\Facades\DB;
+
+
 
 
 use Illuminate\Http\Request;
@@ -15,8 +18,17 @@ class ProductController extends Controller
 
     public function index()
     {
-     $porduct = Product::with('users','categories')->get();
-        return view('admin.product.index', compact('products'));
+
+        $result = DB::table('products')
+        ->join('categories', 'products.category_id', '=', 'categories.id')
+        ->select('products.name as product_name', 'categories.name as category_name')
+        ->get();
+        dd($result);
+
+    // return view('products.index', ['result' => $result]);
+    //  $porduct = Product::with('users','categories','user')->get();
+    //  dd($porduct);
+    //     return view('admin.product.index', compact('products'));
 
     }
 
@@ -28,6 +40,7 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
+
         return view('admin.product.create',compact('categories'));
 
     }
