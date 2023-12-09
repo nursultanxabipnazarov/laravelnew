@@ -19,16 +19,13 @@ class ProductController extends Controller
     public function index()
     {
 
-        $result = DB::table('products')
-        ->join('categories', 'products.category_id', '=', 'categories.id')
-        ->select('products.name as product_name', 'categories.name as category_name')
-        ->get();
-        dd($result);
+        $user = User::all();
+        
+        dd($user);
 
-    // return view('products.index', ['result' => $result]);
-    //  $porduct = Product::with('users','categories','user')->get();
-    //  dd($porduct);
-    //     return view('admin.product.index', compact('products'));
+
+
+
 
     }
 
@@ -53,8 +50,23 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        
-    }
+        $request -> validate([
+            'name'=> 'required',
+            'price'=> 'required',
+
+        ]);
+        $product = Product::create([
+            'name'=> $request->name,
+            'price'=> $request->price,
+            'category_id'=>$request->category_id,
+            'user_id'=>auth()->id(),
+            'img'=> $request->img,
+            'desc'=>$request->desc,
+
+        ]);
+
+        return redirect('products.index')->with('success','OK');
+ }
 
     /**
      * Display the specified resource.

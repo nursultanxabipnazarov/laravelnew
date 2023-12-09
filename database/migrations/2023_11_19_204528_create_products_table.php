@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained();
             $table->string('name');
             $table->integer('price');
-            $table->string('img');
+            $table->string('img')->nullable();
             $table->text('desc');
             $table->timestamps();
         });
