@@ -19,9 +19,13 @@ class ProductController extends Controller
     public function index()
     {
 
-        $user = User::all();
+       $products = Product::find(1);
+
+        $productName = $products->category;
+
         
-        dd($user);
+
+
 
 
 
