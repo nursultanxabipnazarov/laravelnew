@@ -19,11 +19,10 @@ class ProductController extends Controller
     public function index()
     {
 
-       $products = Product::find(1);
+       $products = Product::get();
 
-        $productName = $products->category;
 
-        
+        return view("admin.product.index", compact("products"));
 
 
 
