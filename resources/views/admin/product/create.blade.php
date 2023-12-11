@@ -94,8 +94,8 @@
                           type="file"
                           name="img"
                           class="custom-file-input"
-                          id="validatedCustomFile"
-                          required
+                          
+
                         />
                         <label
                           class="custom-file-label"

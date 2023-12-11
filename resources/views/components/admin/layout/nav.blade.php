@@ -18,8 +18,8 @@
                   ><span class="hide-menu">Dashboard</span></a
                 >
               </li>
-           
-                
+
+
               <li class="sidebar-item">
                 <a
                   class="sidebar-link has-arrow waves-effect waves-dark"
@@ -44,9 +44,9 @@
                   </li>
                 </ul>
               </li>
-             
-             
-                
+
+
+
                 <li class="sidebar-item">
                   <a
                     class="sidebar-link has-arrow waves-effect waves-dark"
@@ -64,7 +64,7 @@
                       >
                     </li>
                     <li class="sidebar-item">
-                      <a href="{{route('categories.index')}}" class="sidebar-link"
+                      <a href="{{route('products.index')}}" class="sidebar-link"
                         ><i class="mdi mdi-note-plus"></i
                         ><span class="hide-menu"> All product </span></a
                       >
@@ -284,4 +284,4 @@
         <!-- End Sidebar scroll-->
       </aside>
 
-    
+
